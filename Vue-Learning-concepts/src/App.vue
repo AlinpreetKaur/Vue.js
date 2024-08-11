@@ -1,30 +1,18 @@
 <!-- This is to practice Composition API -->
-<script >
+<script setup>
 import { ref } from 'vue';
-export default {
-  setup() {
     const name = ref('John Doe');
     const selected = ref('Pending');
     const tasks = ref([1,2,3,4]);
     const light = ref('ON');
     const link = ref('https://google.com');
     
-    const switchLight = () =>{
+    const switchLight = () => {
         console.log('Hiii')
       light.value  = (light.value === "ON") ? 'OFF':"ON" 
     }
 
-
-    return {
-      name,
-      selected,
-      tasks,
-      light,
-      link,
-      switchLight
-    }
-  }
-}
+  
 </script>
 
 <template>
